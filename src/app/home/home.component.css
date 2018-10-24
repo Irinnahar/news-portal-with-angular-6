@@ -1,0 +1,30 @@
+.example-container.mat-drawer-container.mat-sidenav-container.mat-drawer-transition {
+
+    height: 100vh;
+
+}
+.mat-toolbar {
+    background: #0a7878;
+    color: #d6eef2;
+}
+.mat-drawer.mat-sidenav{
+    background: #178F83;
+}
+#navlist {
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    transition: .3s all linear;
+}
+#navlist:hover{
+    background: #b9b9b94d
+}
+#navimg {
+
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 30px;
+    border: 1px solid;
+
+}
