@@ -22,4 +22,9 @@ export class HomeComponent implements OnInit {
     )
   }
 
+  searchArticles(source){
+    console.log("selected source is: "+source);
+    this.news.getArticlesByID(source).subscribe(news => this.articles = news['articles']);
+  }
+
 }

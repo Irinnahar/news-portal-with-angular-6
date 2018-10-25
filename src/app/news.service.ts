@@ -15,4 +15,7 @@ export class NewsService {
   getArticles(){
     return this.http.get('https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=' + this.apiKey)
   }
+  getArticlesByID(source: String){
+    return this.http.get('https://newsapi.org/v2/top-headlines?sources='+source+'&apiKey='+this.apiKey);
+   }
 }

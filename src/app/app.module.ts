@@ -8,11 +8,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { NewsService } from './news.service';
 import { HomeComponent } from './home/home.component';
+import { RightnavComponent } from './rightnav/rightnav.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    RightnavComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

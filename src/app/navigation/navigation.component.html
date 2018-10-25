@@ -1,0 +1,17 @@
+<mat-toolbar>
+    <button mat-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+    <span>News Today</span>
+   
+  </mat-toolbar>
+  <mat-sidenav-container class="example-container" >
+  <mat-sidenav #sidenav mode="side" >
+      <mat-list>
+        <mat-list-item id="navlist"  *ngFor="let source of sources" (click)= "searchArticles(source.id) ; sidenav.close()" > 
+          
+            <img id="navimg" src="../../assets/images/{{source.id}}.png">
+            {{source.name}}
+        </mat-list-item>
+   
+      </mat-list>
+  </mat-sidenav>
+</mat-sidenav-container>

@@ -3,10 +3,7 @@
     height: 100vh;
 
 }
-.mat-toolbar {
-    background: #0a7878;
-    color: #d6eef2;
-}
+
 .mat-drawer.mat-sidenav{
     background: #178F83;
 }
@@ -27,4 +24,10 @@
     border-radius: 30px;
     border: 1px solid;
 
+}
+mat-card-title.mat-card-title {
+    font-size: 15px;
+}
+mat-card-subtitle.mat-card-subtitle, mat-card-actions.mat-card-actions {
+    font-size: 12px;
 }
