@@ -2,3 +2,44 @@
     background: #0a7878;
     color: #d6eef2;
 }
+.example-container.mat-drawer-container.mat-sidenav-container.mat-drawer-transition {
+
+    height: 100vh;
+
+}
+
+.mat-drawer.mat-sidenav{
+    background: #178F83;
+}
+#navlist {
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    transition: .3s all linear;
+}
+#navlist:hover{
+    background: #b9b9b94d
+}
+#navimg {
+
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 30px;
+    border: 1px solid;
+
+}
+mat-card-title.mat-card-title {
+    font-size: 15px;
+}
+mat-card-subtitle.mat-card-subtitle, mat-card-actions.mat-card-actions {
+    font-size: 12px;
+}
+/* #cardimg {
+
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    margin-right: 10px;
+
+} */

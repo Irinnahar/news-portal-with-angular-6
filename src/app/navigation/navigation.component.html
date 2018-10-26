@@ -1,17 +1,47 @@
 <mat-toolbar>
     <button mat-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
-    <span>News Today</span>
-   
-  </mat-toolbar>
-  <mat-sidenav-container class="example-container" >
-  <mat-sidenav #sidenav mode="side" >
-      <mat-list>
-        <mat-list-item id="navlist"  *ngFor="let source of sources" (click)= "searchArticles(source.id) ; sidenav.close()" > 
-          
-            <img id="navimg" src="../../assets/images/{{source.id}}.png">
-            {{source.name}}
-        </mat-list-item>
-   
-      </mat-list>
-  </mat-sidenav>
-</mat-sidenav-container>
+    <span>News Today</span>  
+</mat-toolbar>
+
+
+<mat-sidenav-container class="example-container" >
+    <mat-sidenav #sidenav mode="side" >
+        <mat-list>
+          <mat-list-item id="navlist"  *ngFor="let source of sources" (click)= "searchArticles(source.id) ; sidenav.close()" > 
+            
+              <img id="navimg" src="../../assets/images/{{source.id}}.png">
+              {{source.name}}
+          </mat-list-item>
+     
+        </mat-list>
+    </mat-sidenav>
+   <mat-sidenav-content>
+        <div class="container ">
+          <h1>Recent News</h1>
+            <div class="row">
+              <div  *ngFor="let article of articles | slice:0-4" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+                  <mat-card class="">
+                    <mat-card-title>
+                        <!-- <img id="cardimg" src="../../assets/images/{{article.source.id}}.png"> -->
+                        {{article.title}}
+                    </mat-card-title>
+                    <mat-card-subtitle>Source: {{article.source.name}} </mat-card-subtitle>
+                    <img  mat-card-image src="{{article.urlToImage}}" alt="" width="100%">
+                    <mat-card-actions>	{{article.description}}</mat-card-actions>
+                    <a href="{{article.url}}" class="btn btn-primary">Read More</a>
+                  </mat-card>
+              </div>
+            </div> 
+            <div class="row">
+        
+                <div class="col-md-9">
+                    <app-home></app-home>
+                </div>
+                <div class="col-md-3">
+                    <app-rightnav></app-rightnav>
+                </div>
+            </div>
+        </div>
+       
+    </mat-sidenav-content>
+  </mat-sidenav-container>

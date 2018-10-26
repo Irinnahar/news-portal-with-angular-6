@@ -1,30 +1,19 @@
-
-
-<mat-sidenav-container class="example-container" >
-
-  <mat-sidenav-content>
-      <div class="container ">
-        <h1>Recent News</h1>
-          <div class="row">
-            <div  *ngFor="let article of articles" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
-                <mat-card class="">
-                  <mat-card-title>
-                      <!-- <img id="cardimg" src="../../assets/images/{{article.source.id}}.png"> -->
-                      {{article.title}}
-                  </mat-card-title>
-                  <mat-card-subtitle>Source: {{article.source.name}} </mat-card-subtitle>
-                  <img  mat-card-image src="{{article.urlToImage}}" alt="" width="100%">
-                  <mat-card-actions>	{{article.description}}</mat-card-actions>
-                  <a href="{{article.url}}" class="btn btn-primary">Read More</a>
-                </mat-card>
+<div id="accordion">
+        <div class="card" *ngFor="let article of sports">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"  aria-controls="collapseOne">
+                {{article.title}}
+                <img src="{{article.urlToImage}}" style="width:70px">
+              </button>            
+            </h5>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              {{article.description}}
             </div>
           </div>
-         
+        </div>
+
       </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
-
-
-
-
-

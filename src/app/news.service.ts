@@ -18,4 +18,7 @@ export class NewsService {
   getArticlesByID(source: String){
     return this.http.get('https://newsapi.org/v2/top-headlines?sources='+source+'&apiKey='+this.apiKey);
    }
+   getSports(){
+    return this.http.get('https://newsapi.org/v2/top-headlines?category=sports&country=us&apiKey=' + this.apiKey)
+  }
 }

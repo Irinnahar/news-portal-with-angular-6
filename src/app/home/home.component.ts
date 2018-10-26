@@ -10,6 +10,8 @@ export class HomeComponent implements OnInit {
 
   sources: Array <any>;
   articles: Array <any>;
+  sports: Array <any>;
+
   constructor(private news: NewsService) { }
 
   ngOnInit() {
@@ -19,6 +21,9 @@ export class HomeComponent implements OnInit {
     )
     this.news.getArticles().subscribe(
       news => this.articles = news['articles']
+    )
+    this.news.getSports().subscribe(
+      news => this.sports = news['articles']
     )
   }
 
